@@ -1,0 +1,23 @@
+<table *ngIf="items?.length > 0;else noItems" class="striped">
+  <thead title="Enterprises">
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Country</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of items">
+      <td>{{item.name}}</td>
+      <td>{{item.address}}</td>
+      <td>{{item.city}}</td>
+      <td>{{item.country}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<ng-template #noItems>
+  <hr>
+  <h5>There are no items to list</h5>
+</ng-template>
